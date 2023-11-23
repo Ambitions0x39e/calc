@@ -22,4 +22,4 @@ This Project will constantly be progressed, adding features of different calcula
 `targeted`
 ---
 `by Ambitions0x39e.`
-`Last update:` 
+`Last update: 2023/11/23` 
