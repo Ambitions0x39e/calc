@@ -2,6 +2,13 @@
 #include <algorithm>
 using namespace std;
 double table[2][1024];
+/*
+This program is a calculator for the expectation and variance of a probability distribution.
+The distribution is a table of two parts, the first part is the x part, the second part is the p part.
+The x part is a list of index, the p part is a list of possibilities.
+The program will calculate the expectation and variance of the distribution.
+The program will use the table to calculate the expectation and variance.
+*/
 int main()
 {
     int table_length;
