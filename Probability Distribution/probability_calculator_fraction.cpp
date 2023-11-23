@@ -6,7 +6,7 @@ this struct provides with a new type FRACTION, in the struct it provides 3 funct
     __print(): prints the FRACTION with the structure " %d / %d"
     __init(): initialises the FRACTION with the given parameters
     simplify(): simplifies the FRACTION
-also defined following fucntions:
+also defined following functions:
     add(): adds two FRACTIONS and returns the result
     multiply(): multiplies two FRACTIONS and returns the result
 */
@@ -62,21 +62,31 @@ int table[1024];
 FRAC prob[1024];
 int main()
 {
-    // int table_length;
-    // cout << "pls input the table length" << endl;
-    // cin >> table_length;
-    // cout << "pls input the x part" << endl;
-    // for (int i = 0; i < table_length; i++)
-    // {
-    //     cin >> table[0];
-    // }
-    // cout << "pls input the p part" << endl;
-    // for (int i = 0; i < table_length; i++)
-    // {
-    //     scanf("%d/%d", &prob[i].numerator, &prob[i].denominator);
-    // }
-    FRAC a,b;
-    a.__input(), b.__input();
-    
+    int table_length;
+    cout << "pls input the table length" << endl;
+    cin >> table_length;
+    cout << "pls input the x part" << endl;
+    for (int i = 0; i < table_length; i++)
+    {
+        cin >> table[i];
+    }
+    cout << "pls input the p part" << endl;
+    for (int i = 0; i < table_length; i++)
+    {
+        scanf("%d/%d", &prob[i].numerator, &prob[i].denominator);
+        prob[i].__print();
+        cout<<' ';
+    }
+    cout<<endl;
+    FRAC expectation; 
+    expectation.__init(0, 1);
+    for(int i=0;i<table_length; i++) {
+        FRAC t=multiply(newNode(table[i],1),prob[i]);
+        // t.__print();
+        expectation=add(expectation, t);
+        expectation.__print();
+        cout<<' ';
+    }
+    expectation.__print();
     return 0;
 }
