@@ -2,7 +2,7 @@
 #include <algorithm>
 using namespace std;
 /*
-this struct provides with a new type FRACTION, in the struct it provides 3 functions: 
+this struct provides with a new type FRACTION, in the struct it provides 3 functions:
     __print(): prints the FRACTION with the structure " %d / %d"
     __init(): initialises the FRACTION with the given parameters
     simplify(): simplifies the FRACTION
@@ -57,40 +57,29 @@ FRAC multiply(FRAC a, FRAC b)
 }
 int table[1024];
 FRAC prob[1024];
-int main() {
-    int a,b,c,d;
-    cin >> a >> b >> c >> d;
-    FRAC fa,fb;
-    fa.__init(a,b);
-    fb.__init(c,d);
-    FRAC fc;
-    fc = multiply(fa,fb);
-    fc.__print();
+int main()
+{
+    int table_length;
+    cout << "pls input the table length" << endl;
+    cin >> table_length;
+    cout << "pls input the x part" << endl;
+    for (int i = 0; i < table_length; i++)
+    {
+        cin >> table[0];
+    }
+    cout << "pls input the p part" << endl;
+    for (int i = 0; i < table_length; i++)
+    {
+        scanf("%d/%d", &prob[i].numerator, &prob[i].denominator);
+    }
+    FRAC expectation;
+    expectation.__init(1, 1);
+    for (int i = 0; i < table_length; i++)
+    {
+        FRAC temp;
+        temp.__init(table[i] * prob[i].numerator, prob[i].denominator);
+        temp.simplify();
+        expectation = add(expectation, temp);
+    }
     return 0;
 }
-// int main()
-// {
-//     int table_length;
-//     cout << "pls input the table length" << endl;
-//     cin >> table_length;
-//     cout << "pls input the x part" << endl;
-//     for (int i = 0; i < table_length; i++)
-//     {
-//         cin >> table[0];
-//     }
-//     cout << "pls input the p part" << endl;
-//     for (int i = 0; i < table_length; i++)
-//     {
-//         scanf("%d/%d", &prob[i].numerator, &prob[i].denominator);
-//     }
-//     FRAC expectation;
-//     expectation.__init(1, 1);
-//     for (int i = 0; i < table_length; i++)
-//     {
-//         FRAC temp;
-//         temp.__init(table[i] * prob[i].numerator, prob[i].denominator);
-//         temp.simplify();
-//         expectation = add(expectation, temp);
-//     }
-//     return 0;
-// }
