@@ -1,18 +1,25 @@
-# Calculator_
+# Calculator
 ---
 This Project will constantly be progressed, adding features of different calculation needs.
  
 ---
-## current progress
+## Current progress
 - probability & expectations
-`double number used to progress`
+  - `double number used to progress`
+    - done when creating repository
+  - `fractions used to progress`
+    - done in <a href="https://github.com/Ambitions0x39e/calc/pull/5">#5</a>
 
-## upcoming updates
-- probability & expectations >> fractions
-`using struct, in future might update to Class` 
 
-## future target
+## Upcoming updates
+- adding feature such as binary support, oct support and hex support.
+- *probably* make fractions into headers
+- combine function `multiply()` and `add()` into struct `fractions` 
+- make `struct` into `class` 
+
+## Future target
 - finish gui construction, might based on Tkinker or PythonSimpleGUI
 `targeted`
 ---
 `by Ambitions0x39e.`
+`Last update:` 
