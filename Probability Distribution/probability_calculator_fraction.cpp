@@ -33,6 +33,9 @@ typedef struct frac
     {
         printf("%d/%d", numerator, denominator);
     }
+    void __input() {
+        scanf("%d/%d", &numerator, &denominator);
+    }
 } FRAC;
 FRAC newNode(int nume, int deno)
 {
@@ -59,27 +62,21 @@ int table[1024];
 FRAC prob[1024];
 int main()
 {
-    int table_length;
-    cout << "pls input the table length" << endl;
-    cin >> table_length;
-    cout << "pls input the x part" << endl;
-    for (int i = 0; i < table_length; i++)
-    {
-        cin >> table[0];
-    }
-    cout << "pls input the p part" << endl;
-    for (int i = 0; i < table_length; i++)
-    {
-        scanf("%d/%d", &prob[i].numerator, &prob[i].denominator);
-    }
-    FRAC expectation;
-    expectation.__init(1, 1);
-    for (int i = 0; i < table_length; i++)
-    {
-        FRAC temp;
-        temp.__init(table[i] * prob[i].numerator, prob[i].denominator);
-        temp.simplify();
-        expectation = add(expectation, temp);
-    }
+    // int table_length;
+    // cout << "pls input the table length" << endl;
+    // cin >> table_length;
+    // cout << "pls input the x part" << endl;
+    // for (int i = 0; i < table_length; i++)
+    // {
+    //     cin >> table[0];
+    // }
+    // cout << "pls input the p part" << endl;
+    // for (int i = 0; i < table_length; i++)
+    // {
+    //     scanf("%d/%d", &prob[i].numerator, &prob[i].denominator);
+    // }
+    FRAC a,b;
+    a.__input(), b.__input();
+    
     return 0;
 }
