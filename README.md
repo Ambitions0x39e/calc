@@ -1,4 +1,4 @@
-# calc
+# Calculator_
 ---
 This Project will constantly be progressed, adding features of different calculation needs.
  
