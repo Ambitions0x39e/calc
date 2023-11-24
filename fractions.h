@@ -46,6 +46,22 @@ public:
         result.simplify();
         return result;
     }
+    // re-define operator for `class fractions` : subtraction
+    fractions operator-(const fractions &b) const {
+        fractions result;
+        result.denominator=this->denominator * b.denominator;
+        result.numerator=this->denominator * b.numerator - b.denominator * this->numerator;
+        result.simplify(); 
+        return result;
+    }
+    // re-define operator for `class fractions` : division
+    fractions operator/(const fractions & b) const {
+        fractions result;
+        result.denominator=this->denominator * b.numerator;
+        result.numerator=this->numerator * b.denominator;
+        result.simplify();
+        return result;
+    }
 private:
     void correctOrder()
     {
