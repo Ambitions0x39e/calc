@@ -1,5 +1,17 @@
 #include "stdio.h"
 #include "algorithm"
+
+/*
+this class provides with a new datatype FRACTION, in the struct it provides 3 functions:
+    __print(): prints the FRACTION with the structure " %d / %d"
+    __init(): initialises the FRACTION with the given parameters
+    simplify(): simplifies the FRACTION
+    correctOrder(): corrects the order of the FRACTION, if the denominator is negative and the numerator is positive, it will change the order
+        Note: the function simplify() calls correctOrder(), which is combined into one step.
+    the class itself also re-defines four operator: '+', '-', '*', '/'
+also defined following functions:
+    newNode(): creates a new FRACTION with the given parameters, creating 0/1 in default
+*/
 int gcd(int a, int b)
 {
     return b == 0 ? a : gcd(b, a % b);
@@ -47,21 +59,24 @@ public:
         return result;
     }
     // re-define operator for `class fractions` : subtraction
-    fractions operator-(const fractions &b) const {
+    fractions operator-(const fractions &b) const
+    {
         fractions result;
-        result.denominator=this->denominator * b.denominator;
-        result.numerator=this->denominator * b.numerator - b.denominator * this->numerator;
-        result.simplify(); 
-        return result;
-    }
-    // re-define operator for `class fractions` : division
-    fractions operator/(const fractions & b) const {
-        fractions result;
-        result.denominator=this->denominator * b.numerator;
-        result.numerator=this->numerator * b.denominator;
+        result.denominator = this->denominator * b.denominator;
+        result.numerator = this->denominator * b.numerator - b.denominator * this->numerator;
         result.simplify();
         return result;
     }
+    // re-define operator for `class fractions` : division
+    fractions operator/(const fractions &b) const
+    {
+        fractions result;
+        result.denominator = this->denominator * b.numerator;
+        result.numerator = this->numerator * b.denominator;
+        result.simplify();
+        return result;
+    }
+
 private:
     void correctOrder()
     {
@@ -72,7 +87,7 @@ private:
         }
     }
 };
-fractions newNode(int nume, int deno)
+fractions newNode(int nume = 0, int deno = 1)
 {
     fractions p;
     p.__init(nume, deno);
