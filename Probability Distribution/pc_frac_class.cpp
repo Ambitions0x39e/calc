@@ -11,7 +11,7 @@ this struct provides with a new type FRACTION, in the struct it provides 3 funct
 also defined following functions:
     add(): adds two FRACTIONS and returns the result
     multiply(): multiplies two FRACTIONS and returns the result
-    newNode(): creates a new FRACTION with the given parameters 
+    newNode(): creates a new FRACTION with the given parameters
 */
 int gcd(int a, int b)
 {
@@ -42,11 +42,14 @@ public:
     {
         scanf("%d/%d", &numerator, &denominator);
     }
+
 private:
-    void correctOrder() {
-        if(denominator<0 && numerator>0) { 
-            denominator*=-1;
-            numerator*=-1;
+    void correctOrder()
+    {
+        if (denominator < 0 && numerator > 0)
+        {
+            denominator *= -1;
+            numerator *= -1;
         }
     }
 };
@@ -111,21 +114,21 @@ int main()
     for (int i = 0; i < table_length; i++)
     {
         fractions t;
-        t.__init(1,1);
+        t.__init(1, 1);
         fractions tmp;
         tmp.__init(table[i], 1);
         // tmp.__print();
         // cout<<' ';
-        t=multiply(t,newNode(table[i],1));
-        t=multiply(t,newNode(table[i],1));
-        t=multiply(t,prob[i]);
-        variance=add(variance,t);
+        t = multiply(t, newNode(table[i], 1));
+        t = multiply(t, newNode(table[i], 1));
+        t = multiply(t, prob[i]);
+        variance = add(variance, t);
         variance.simplify();
         // variance.__print();
         // cout<<' ';
     }
-    cout<<endl;
-    cout<<"the variance is: ";
+    cout << endl;
+    cout << "the variance is: ";
     variance.__print();
     return 0;
 }
