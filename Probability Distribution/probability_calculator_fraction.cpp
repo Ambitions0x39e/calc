@@ -11,14 +11,15 @@ this struct provides with a new type FRACTION, in the struct it provides 3 funct
 also defined following functions:
     add(): adds two FRACTIONS and returns the result
     multiply(): multiplies two FRACTIONS and returns the result
-    newNode(): creates a new FRACTION with the given parameters 
+    newNode(): creates a new FRACTION with the given parameters
 */
 int gcd(int a, int b)
 {
     return b == 0 ? a : gcd(b, a % b);
 }
-typedef struct frac
+class fractions
 {
+public:
     // numerator -> 分子
     // denominator -> 分母
     int numerator, denominator;
@@ -26,6 +27,7 @@ typedef struct frac
     {
         int _selfGCD = gcd(numerator, denominator);
         numerator /= _selfGCD, denominator /= _selfGCD;
+        correctOrder();
     }
     void __init(int numa, int numb)
     {
@@ -40,36 +42,40 @@ typedef struct frac
     {
         scanf("%d/%d", &numerator, &denominator);
     }
-    void correctOrder() {
-        if(denominator<0 && numerator>0) { 
-            denominator*=-1;
-            numerator*=-1;
+
+private:
+    void correctOrder()
+    {
+        if (denominator < 0 && numerator > 0)
+        {
+            denominator *= -1;
+            numerator *= -1;
         }
     }
-} FRAC;
-FRAC newNode(int nume, int deno)
+};
+fractions newNode(int nume, int deno)
 {
-    FRAC p;
+    fractions p;
     p.__init(nume, deno);
     return p;
 }
-FRAC add(FRAC a, FRAC b)
+fractions add(fractions a, fractions b)
 {
-    FRAC sum;
+    fractions sum;
     sum.denominator = a.denominator * b.denominator;
     sum.numerator = a.denominator * b.numerator + b.denominator * a.numerator;
     sum.simplify();
     return sum;
 }
-FRAC multiply(FRAC a, FRAC b)
+fractions multiply(fractions a, fractions b)
 {
-    FRAC sum;
+    fractions sum;
     sum.__init(a.numerator * b.numerator, a.denominator * b.denominator);
     sum.simplify();
     return sum;
 }
 int table[1024];
-FRAC prob[1024];
+fractions prob[1024];
 int main()
 {
     int table_length;
@@ -88,11 +94,11 @@ int main()
         // cout<<' ';
     }
     cout << endl;
-    FRAC expectation;
+    fractions expectation;
     expectation.__init(0, 1);
     for (int i = 0; i < table_length; i++)
     {
-        FRAC t = multiply(newNode(table[i], 1), prob[i]);
+        fractions t = multiply(newNode(table[i], 1), prob[i]);
         // t.__print();
         expectation = add(expectation, t);
         expectation.simplify();
@@ -103,27 +109,26 @@ int main()
     expectation.__print();
     cout << endl;
 
-    FRAC variance = multiply(expectation, expectation);
+    fractions variance = multiply(expectation, expectation);
     variance.numerator *= -1;
     for (int i = 0; i < table_length; i++)
     {
-        FRAC t;
-        t.__init(1,1);
-        FRAC tmp;
+        fractions t;
+        t.__init(1, 1);
+        fractions tmp;
         tmp.__init(table[i], 1);
         // tmp.__print();
         // cout<<' ';
-        t=multiply(t,newNode(table[i],1));
-        t=multiply(t,newNode(table[i],1));
-        t=multiply(t,prob[i]);
-        variance=add(variance,t);
+        t = multiply(t, newNode(table[i], 1));
+        t = multiply(t, newNode(table[i], 1));
+        t = multiply(t, prob[i]);
+        variance = add(variance, t);
         variance.simplify();
-        variance.correctOrder();
         // variance.__print();
         // cout<<' ';
     }
-    cout<<endl;
-    cout<<"the variance is: ";
+    cout << endl;
+    cout << "the variance is: ";
     variance.__print();
     return 0;
 }
