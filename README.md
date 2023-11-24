@@ -4,10 +4,10 @@ This Project will constantly be progressed, adding features of different calcula
 
 ---
 ## Needed Environment
-For Linux/Unix users, please install `g++`.
+- For Linux/Unix users, please install `g++`.
 - For macOS users make sure you installed `Command Line Tool for Xcode` to run g++
 - For Windows users....good luck...
-Also, Please check if you installed `Python`
+- Also, please check if you installed `Python`.
 We suggest `Pypy3`, or `Python3`
 
  
@@ -27,7 +27,7 @@ We suggest `Pypy3`, or `Python3`
 - add launcher using python3 
 
 ## Future target
-- ***target***finish gui construction, might based on Tkinker or PythonSimpleGUI
+- ***target*** finish gui construction, might based on Tkinker or PythonSimpleGUI
 ---
 `by Ambitions0x39e.`
 `Last update: 2023/11/24` 
