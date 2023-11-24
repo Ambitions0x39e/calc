@@ -29,7 +29,8 @@ public:
         scanf("%d/%d", &numerator, &denominator);
     }
     // re-define operator for `class fractions` : addition
-    fractions operator + (const fractions & b) const {
+    fractions operator+(const fractions &b) const
+    {
         fractions result;
         result.denominator = this->denominator * b.denominator;
         result.numerator = this->denominator * b.numerator + b.denominator * this->numerator;
@@ -37,7 +38,8 @@ public:
         return result;
     }
     // re-define operator for `class fractions` : multiplication
-    fractions operator * (const fractions & b) const { 
+    fractions operator*(const fractions &b) const
+    {
         fractions result;
         result.denominator = this->denominator * b.denominator;
         result.numerator = this->numerator * b.numerator;
