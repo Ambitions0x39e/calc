@@ -38,9 +38,9 @@ int main()
     expectation.__init(0, 1);
     for (int i = 0; i < table_length; i++)
     {
-        fractions t = multiply(newNode(table[i], 1), prob[i]);
+        fractions t= newNode(table[i], 1) * prob[i];
         // t.__print();
-        expectation = add(expectation, t);
+        expectation = expectation + t;
         expectation.simplify();
         // expectation.__print();
         // cout << ' ';
@@ -49,7 +49,7 @@ int main()
     expectation.__print();
     cout << endl;
 
-    fractions variance = multiply(expectation, expectation);
+    fractions variance = expectation * expectation;
     variance.numerator *= -1;
     for (int i = 0; i < table_length; i++)
     {
@@ -59,14 +59,16 @@ int main()
         tmp.__init(table[i], 1);
         // tmp.__print();
         // cout<<' ';
-        t = multiply(t, newNode(table[i], 1));
-        t = multiply(t, newNode(table[i], 1));
-        t = multiply(t, prob[i]);
-        variance = add(variance, t);
+        t = t * newNode(table[i], 1);
+        t = t * newNode(table[i], 1);
+        t = t * prob[i];
+        variance = variance + t;
         variance.simplify();
         // variance.__print();
         // cout<<' ';
     }
+    cout << endl;
+    expectation.__print();
     cout << endl;
     cout << "the variance is: ";
     variance.__print();
