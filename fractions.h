@@ -7,8 +7,7 @@ int gcd(int a, int b)
 class fractions
 {
 public:
-    // numerator -> 分子
-    // denominator -> 分母
+    // numerator -> 分子     denominator -> 分母
     int numerator, denominator;
     void simplify()
     {
@@ -29,7 +28,22 @@ public:
     {
         scanf("%d/%d", &numerator, &denominator);
     }
-
+    // re-define operator for `class fractions` : addition
+    fractions operator + (const fractions & b) const {
+        fractions result;
+        result.denominator = this->denominator * b.denominator;
+        result.numerator = this->denominator * b.numerator + b.denominator * this->numerator;
+        result.simplify();
+        return result;
+    }
+    // re-define operator for `class fractions` : multiplication
+    fractions operator * (const fractions & b) const { 
+        fractions result;
+        result.denominator = this->denominator * b.denominator;
+        result.numerator = this->numerator * b.numerator;
+        result.simplify();
+        return result;
+    }
 private:
     void correctOrder()
     {
@@ -45,19 +59,4 @@ fractions newNode(int nume, int deno)
     fractions p;
     p.__init(nume, deno);
     return p;
-}
-fractions add(fractions a, fractions b)
-{
-    fractions sum;
-    sum.denominator = a.denominator * b.denominator;
-    sum.numerator = a.denominator * b.numerator + b.denominator * a.numerator;
-    sum.simplify();
-    return sum;
-}
-fractions multiply(fractions a, fractions b)
-{
-    fractions sum;
-    sum.__init(a.numerator * b.numerator, a.denominator * b.denominator);
-    sum.simplify();
-    return sum;
 }
