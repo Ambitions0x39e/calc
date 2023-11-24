@@ -38,7 +38,7 @@ int main()
     expectation.__init(0, 1);
     for (int i = 0; i < table_length; i++)
     {
-        fractions t = multiply(newNode(table[i], 1), prob[i]);
+        fractions t= newNode(table[i], 1) * prob[i];
         // t.__print();
         expectation = expectation + t;
         expectation.simplify();
