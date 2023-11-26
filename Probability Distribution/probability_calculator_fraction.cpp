@@ -17,7 +17,7 @@ int main()
     cout << "pls input the p part" << endl;
     for (int i = 0; i < table_length; i++)
     {
-        scanf("%d/%d", &prob[i].numerator, &prob[i].denominator);
+        prob[i].__input()
         // prob[i].__print();
         // cout<<' ';
     }
@@ -26,7 +26,7 @@ int main()
     expectation.__init(0, 1);
     for (int i = 0; i < table_length; i++)
     {
-        fractions t= newNode(table[i], 1) * prob[i];
+        fractions t = newNode(table[i], 1) * prob[i];
         // t.__print();
         expectation = expectation + t;
         expectation.simplify();
