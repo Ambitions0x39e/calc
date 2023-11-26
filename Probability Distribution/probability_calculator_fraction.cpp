@@ -17,7 +17,7 @@ int main()
     cout << "pls input the p part" << endl;
     for (int i = 0; i < table_length; i++)
     {
-        prob[i].__input()
+        prob[i].__input();
         // prob[i].__print();
         // cout<<' ';
     }
