@@ -16,21 +16,20 @@ We suggest `Pypy3`, or `Python3`
 Please see <a href="DATATYPE.md">DATATYPE.md</a>.
 
 ---
-## Current progress
-- probability & expectations
-  - `double number used to progress`
-    - Done when creating directory
-  - `fractions used to progress`
-    - done in <a href="https://github.com/Ambitions0x39e/calc/pull/5">Fraction update</a>
-  - finish migrate struct into class, finsh merging function `add()` and `multiply()` into fraction, make it as `operator`
-    - done in <a href="https://github.com/Ambitions0x39e/calc/pull/10">Operator Update</a>
+## Current progress: Ability
+- Probability & Expectations & Expectation Variance
+  - `Real number` : Done when creating project
+  - `Fractions` : done in <a href="https://github.com/Ambitions0x39e/calc/pull/5">Fraction Update</a>
+- finish migrate struct into class, finsh merging function `add()` and `multiply()` into fraction, make it as `operator`
+  - done in <a href="https://github.com/Ambitions0x39e/calc/pull/10">Operator Update</a>
 
+---
 ## Upcoming updates
-- adding feature such as binary support, oct support and hex support.
-- add launcher using python3 
+- Adding feature such as binary support, oct support and hex support.
+- Add launcher using python3 
 
 ## Future target
-- ***target*** finish gui construction, might based on Tkinker or PythonSimpleGUI
+- ***target*** Finish gui construction, might based on Tkinker or PythonSimpleGUI
 ---
 `by Ambitions0x39e.`
 `Last update: 2023/11/24` 
