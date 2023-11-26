@@ -10,7 +10,11 @@ This Project will constantly be progressed, adding features of different calcula
 - Also, please check if you installed `Python`.
 We suggest `Pypy3`, or `Python3`
 
- 
+---
+## Data Type structure: 
+
+Please see <a href="DATATYPE.md">DATATYPE.md</a>.
+
 ---
 ## Current progress
 - probability & expectations
@@ -21,7 +25,6 @@ We suggest `Pypy3`, or `Python3`
   - finish migrate struct into class, finsh merging function `add()` and `multiply()` into fraction, make it as `operator`
     - done in <a href="https://github.com/Ambitions0x39e/calc/pull/10">Operator Update</a>
 
-
 ## Upcoming updates
 - adding feature such as binary support, oct support and hex support.
 - add launcher using python3 
@@ -31,3 +34,4 @@ We suggest `Pypy3`, or `Python3`
 ---
 `by Ambitions0x39e.`
 `Last update: 2023/11/24` 
+
