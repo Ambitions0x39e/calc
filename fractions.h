@@ -86,6 +86,7 @@ private:
             numerator *= -1;
         }
     }
+
 };
 fractions newNode(int nume = 0, int deno = 1)
 {
@@ -93,3 +94,10 @@ fractions newNode(int nume = 0, int deno = 1)
     p.__init(nume, deno);
     return p;
 }
+class fakeFraction: public fractions {
+    int _coefficient;
+    fakeFraction(int numerator, int denominator);
+    void __print() {
+        printf("%d+%d/%d",numerator/denominator, numerator%denominator, denominator);
+    }
+};
