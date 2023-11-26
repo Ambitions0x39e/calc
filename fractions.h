@@ -21,6 +21,8 @@ class fractions
 public:
     // numerator -> 分子     denominator -> 分母
     int numerator, denominator;
+    fractions();
+    fractions(int numerator, int denominator);
     void simplify()
     {
         int _selfGCD = gcd(numerator, denominator);
@@ -97,6 +99,10 @@ fractions newNode(int nume = 0, int deno = 1)
 class fakeFraction: public fractions {
     int _coefficient;
     fakeFraction(int numerator, int denominator);
+    void __input() {
+        int number;
+        scanf("%d+%d/%d", &number, & numerator, & denominator);
+    }
     void __print() {
         printf("%d+%d/%d",numerator/denominator, numerator%denominator, denominator);
     }
