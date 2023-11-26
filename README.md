@@ -20,8 +20,12 @@ Please see <a href="DATATYPE.md">DATATYPE.md</a>.
 - Probability & Expectations & Expectation Variance
   - `Real number` : Done when creating project
   - `Fractions` : done in <a href="https://github.com/Ambitions0x39e/calc/pull/5">Fraction Update</a>
-- finish migrate struct into class, finsh merging function `add()` and `multiply()` into fraction, make it as `operator`
+
+---
+## Current Progress: Foundations & Lib
+- Finish migrate struct into class, finsh merging function `add()` and `multiply()` into fraction, make it as `operator`
   - done in <a href="https://github.com/Ambitions0x39e/calc/pull/10">Operator Update</a>
+- Finish construction of `fakeFraction`, with changing it's output method and input method. 
 
 ---
 ## Upcoming updates
