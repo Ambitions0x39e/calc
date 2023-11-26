@@ -2,18 +2,6 @@
 #include <algorithm>
 #include "../fractions.h"
 using namespace std;
-/*
-this struct provides with a new type FRACTION, in the struct it provides 3 functions:
-    __print(): prints the FRACTION with the structure " %d / %d"
-    __init(): initialises the FRACTION with the given parameters
-    simplify(): simplifies the FRACTION
-    correctOrder(): corrects the order of the FRACTION, if the denominator is negative and the numerator is positive, it will change the order
-        Note: the function simplify() calls correctOrder(), which is combined into one step.
-also defined following functions:
-    add(): adds two FRACTIONS and returns the result
-    multiply(): multiplies two FRACTIONS and returns the result
-    newNode(): creates a new FRACTION with the given parameters
-*/
 int table[1024];
 fractions prob[1024];
 int main()
