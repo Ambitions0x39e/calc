@@ -1,6 +1,6 @@
 #include <iostream>
 #include <algorithm>
-#include "../fractions.h"
+#include "../src/fractions.h"
 using namespace std;
 int table[1024];
 fractions prob[1024];
