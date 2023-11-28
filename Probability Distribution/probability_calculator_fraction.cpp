@@ -7,14 +7,14 @@ fractions prob[1024];
 int main()
 {
     int table_length;
-    cout << "pls input the table length" << endl;
+    cout << "Pls input the table length" << endl;
     cin >> table_length;
-    cout << "pls input the x part" << endl;
+    cout << "Pls input the x part" << endl;
     for (int i = 0; i < table_length; i++)
     {
         cin >> table[i];
     }
-    cout << "pls input the p part" << endl;
+    cout << "Pls input the p part" << endl;
     for (int i = 0; i < table_length; i++)
     {
         prob[i].__input();
@@ -33,7 +33,7 @@ int main()
         // expectation.__print();
         // cout << ' ';
     }
-    cout << "the expectation is: ";
+    cout << "The expectation is: ";
     expectation.__print();
     cout << endl;
 
