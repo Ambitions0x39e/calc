@@ -33,5 +33,5 @@ Please see <a href="DATATYPE.md">DATATYPE.md</a>.
 - ***target*** Finish gui construction, might based on Tkinker or PythonSimpleGUI
 ---
 `by Ambitions0x39e.`
-`Last update: 2023/11/24` 
+`Last update: 2023/11/29` 
 
