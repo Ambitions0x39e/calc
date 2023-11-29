@@ -19,16 +19,20 @@ _int64 QuickPow(_int64 x, _int64 n)
 /*
 TODO: 
 - Permutation support
-    - _int64
+    - Check if Permutation can run
 - Combination support
-    - _int64
+    - _int64per
 */
 _int64 Permutation(_int64 n, _int64 m)
 {
     _int64 result=1;
-    for(int i=0;i<m;i++) {
-        
+    for(int i=2;i<=n;i++) {
+        result*=i;
     }
+    for(int i=2;i<=(n-m);i++) {
+        result/=i;
+    }
+    return result;
 }
 /*
 
