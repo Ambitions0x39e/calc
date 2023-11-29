@@ -3,8 +3,6 @@
 Up to now, the program has successfully proceed:
 
 - Fractions
-  - Including both normal fractions and fake fractions.
-
 ---
 ## Structure
 
