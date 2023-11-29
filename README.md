@@ -11,7 +11,8 @@ This Project will constantly be progressed, adding features of different calcula
 We suggest `Pypy3`, or `Python3`
 
 ---
-## <a href="DATATYPE.md">Data Type Structure</a>
+## Data Type Structure
+<a href="DATATYPE.md">Click here for more</a>
 Click the title to see more about syntaxes. 
 
 ---
@@ -28,7 +29,7 @@ Click the title to see more about syntaxes.
 - Add launcher using Python 
 
 ## Future target
-- ***target*** Finish gui construction, might based on Tkinker or PythonSimpleGUI
+- Finish gui construction, might based on Tkinker or PythonSimpleGUI
 ---
 By <cite>Ambitions0x39e.</cite>
 Last update: <code>2023/11/29</code>
