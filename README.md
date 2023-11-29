@@ -16,13 +16,10 @@ We suggest `Pypy3`, or `Python3`
 Please see <a href="DATATYPE.md">DATATYPE.md</a>.
 
 ---
-## Current progress: Ability
+## Current progress:
 - Probability & Expectations & Expectation Variance
   - `Real number` : Done when creating project
   - `Fractions` : done in <a href="https://github.com/Ambitions0x39e/calc/pull/5">Fraction Update</a>
-
----
-## Current Progress: Foundations & Lib
 - Finish migrate struct into class, finsh merging function `add()` and `multiply()` into fraction, make it as `operator`
   - done in <a href="https://github.com/Ambitions0x39e/calc/pull/10">Operator Update</a>
 - Finish construction of `fakeFraction`, with changing it's output method and input method. 
@@ -36,5 +33,5 @@ Please see <a href="DATATYPE.md">DATATYPE.md</a>.
 - ***target*** Finish gui construction, might based on Tkinker or PythonSimpleGUI
 ---
 `by Ambitions0x39e.`
-`Last update: 2023/11/24` 
+`Last update: 2023/11/29` 
 
