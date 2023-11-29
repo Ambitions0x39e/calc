@@ -11,27 +11,25 @@ This Project will constantly be progressed, adding features of different calcula
 We suggest `Pypy3`, or `Python3`
 
 ---
-## Data Type structure: 
-
-Please see <a href="DATATYPE.md">DATATYPE.md</a>.
+## <a href="DATATYPE.md">Data Type Structure</a>
+Click the title to see more about syntaxes. 
 
 ---
 ## Current progress:
 - Probability & Expectations & Expectation Variance
-  - `Real number` : Done when creating project
-  - `Fractions` : done in <a href="https://github.com/Ambitions0x39e/calc/pull/5">Fraction Update</a>
-- Finish migrate struct into class, finsh merging function `add()` and `multiply()` into fraction, make it as `operator`
-  - done in <a href="https://github.com/Ambitions0x39e/calc/pull/10">Operator Update</a>
-- Finish construction of `fakeFraction`, with changing it's output method and input method. 
+  - <a color=#blue>Real number</a>
+  - <a href="https://github.com/Ambitions0x39e/calc/pull/5">Fraction</a>
+- <a href="https://github.com/Ambitions0x39e/calc/pull/10">Finish migrate struct into class, finsh merging function `add()` and `multiply()` into fraction, make it as `operator`</a>
+- <a href="https://github.com/Ambitions0x39e/calc/pull/11">Finish construction of `fakeFraction`, with changing it's output method and input method. </a>
 
 ---
 ## Upcoming updates
 - Adding feature such as binary support, oct support and hex support.
-- Add launcher using python3 
+- Add launcher using Python 
 
 ## Future target
 - ***target*** Finish gui construction, might based on Tkinker or PythonSimpleGUI
 ---
-`by Ambitions0x39e.`
-`Last update: 2023/11/29` 
+By <cite>Ambitions0x39e.</cite>
+Last update: <code>2023/11/29</code>
 

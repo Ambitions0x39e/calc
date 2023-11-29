@@ -35,6 +35,8 @@ int main()
     }
     cout << "The expectation is: ";
     expectation.__print();
+    cout << ". The real number for expectation is ";
+    expectation.__print_real();
     cout << endl;
 
     fractions variance = expectation * expectation;
@@ -60,5 +62,7 @@ int main()
     cout << endl;
     cout << "the variance is: ";
     variance.__print();
+    cout << ". the float number of variance is: ";
+    variance.__print_real();
     return 0;
 }
