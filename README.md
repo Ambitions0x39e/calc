@@ -13,7 +13,6 @@ We suggest `Pypy3`, or `Python3`
 ---
 ## Data Type Structure
 <a href="DATATYPE.md">Click here for more</a>
-Click the title to see more about syntaxes. 
 
 ---
 ## Current progress:
