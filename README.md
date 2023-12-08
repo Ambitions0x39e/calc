@@ -31,5 +31,5 @@ We suggest `Pypy3`, or `Python3`
 - Finish gui construction, might based on Tkinker or PythonSimpleGUI
 ---
 By <cite>Ambitions0x39e.</cite>
-Last update: <code>2023/11/29</code>
+Last update: <code>2023/12/8</code>
 
