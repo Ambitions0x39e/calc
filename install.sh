@@ -1,18 +1,13 @@
 #!/bin/zsh
-#If system is darwin(macOS), automatically check if xcode command line tools are installed or what
-#If not, install it.
-if [ "$OSTYPE" = "darwin" ]; then
-  echo "Checking Xcode command line tools..." >&2
-  sleep 5
-  if ! command -v clang >/dev/null 2>&1; then
-    echo "Xcode command line tools not installed. Installing..." >&2
-    xcode-select --install
-    exit 1
-  fi
-  echo "Xcode command line tool is successfully installed." >&2
-fi
-echo "Compiling C++ files..." >&2
 
+echo "Checking Xcode command line tools..." >&2
+sleep 5
+if ! command -v clang >/dev/null 2>&1; then
+  echo "Xcode command line tools not installed. Installing..." >&2
+  xcode-select --install
+  exit 1
+fi
+echo "Xcode command line tool is successfully installed." >&2
 
 sleep 5
 mkdir exes
