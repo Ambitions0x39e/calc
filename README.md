@@ -24,12 +24,12 @@ We suggest `Pypy3`, or `Python3`
 
 ---
 ## Upcoming updates
-- Adding feature such as binary support, oct support and hex support.
+- Adding feature such as Bin support, Oct support and Hex support.
 - Add launcher using Python 
 
 ## Future target
 - Finish gui construction, might based on Tkinker or PythonSimpleGUI
 ---
 By <cite>Ambitions0x39e.</cite>
-Last update: <code>2023/11/29</code>
+Last update: <code>2023/12/8</code>
 
