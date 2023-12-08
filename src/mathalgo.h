@@ -17,20 +17,23 @@ _int64 QuickPow(_int64 x, _int64 n)
     }
 }
 /*
-TODO: 
+TODO:
 - Permutation support
     - Check if Permutation can run
 - Combination support
     - _int64per
 */
+// This function is for calculating permutation nPm under the usage of _int64 number.
 _int64 Permutation(_int64 n, _int64 m)
 {
-    _int64 result=1;
-    for(int i=2;i<=n;i++) {
-        result*=i;
+    _int64 result = 1;
+    for (int i = 2; i <= n; i++)
+    {
+        result *= i;
     }
-    for(int i=2;i<=(n-m);i++) {
-        result/=i;
+    for (int i = 2; i <= (n - m); i++)
+    {
+        result /= i;
     }
     return result;
 }
