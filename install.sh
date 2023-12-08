@@ -8,8 +8,9 @@ if ! command -v clang >/dev/null 2>&1; then
 fi
 echo "Xcode command line tool is successfully installed. Compiling..." >&2
 sleep 5
+mkdir exes
 cd Probability\ Distribution
-g++ probability_calculator_fraction.cpp -o ../exes/probability_calculator_fraction -O2
-g++ probability_calculator_float.cpp -o ../exes/probability_calculator_float -O2
+g++ probability_calculator_fraction.cpp -o ../exes/probability_calculator_fraction -O2 -lm
+g++ probability_calculator_float.cpp -o ../exes/probability_calculator_float -O2 -lm
 chmod +x probability_calculator_fraction probability_calculator_float
 echo "C++ files successfully compiled!" >&2
