@@ -37,6 +37,16 @@ _int64 Permutation(_int64 n, _int64 m)
     }
     return result;
 }
+
+_int64 Combination(_int64 n, _int64 m) 
+{
+    _int64 result = Permutation(n,m);
+    for (int i = 2; i <= m; i++)
+    {
+        result /= i;
+    }
+    return result;
+}
 /*
 
 */
