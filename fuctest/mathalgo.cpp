@@ -4,7 +4,7 @@ using namespace std;
 
 int main() 
 {
-    int a,b;
+    _int64 a,b;
     cin>>a>>b;
-    cout<<QuickPow(a,b);
+    cout<<Permutation(a,b);
 }
