@@ -17,11 +17,10 @@ _int64 QuickPow(_int64 x, _int64 n)
         return res * res;
     }
 }
-/*
-FIXME: 
-
-*/
-// This function is for calculating permutation nPm under the usage of _int64 number.
+///@brief This function is for calculating permutation nPm under the usage of _int64 number.
+///@param n The total number.
+///@param m The number of selection.
+///@return The permutation result, in _int64 structure.
 _int64 Permutation(_int64 n, _int64 m)
 {
     _int64 result = 1;
