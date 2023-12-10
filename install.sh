@@ -10,6 +10,9 @@ fi
 echo "Xcode command line tool is successfully installed." >&2
 echo "Compiling C++ files..." >&2
 sleep 5
+if test -d /exes; then 
+  rm -rf exes
+fi
 mkdir exes
 # Compile Files about Probability Distribution
 echo "Compile: Probability Distribution" >&2
