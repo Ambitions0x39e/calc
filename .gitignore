@@ -1,3 +1,4 @@
-run.py
 .DS_Store
 gptWstarter.py
+ctimecheck.cpp
+.vscode
