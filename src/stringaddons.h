@@ -2,8 +2,11 @@
 #include <stdio.h>
 #include "deftypes.h"
 using namespace std;
+/// @brief string built with C to help some features.
 class _str
 {
+public:
+    // get length of this object
     int length()
     {
         return strlen(arr);
@@ -16,10 +19,25 @@ class _str
             swap(arr[i], arr[j]);
         }
     }
-    void itoa()
+    // integer to ascii, available for both _int64 (long long) and _int32(int)
+    void itoa(_int32 num)
     {
+        while (num)
+        {
+            arr[length()] = num % 10;
+            num /= 10;
+        }
+    }
+    void itoa(_int64 num)
+    {
+        while (num)
+        {
+            arr[length()] = num % 10;
+            num /= 10;
+        }
     }
     char arr[INT32_MAX];
+
 private:
 };
 char *itoa(_int64 num)
