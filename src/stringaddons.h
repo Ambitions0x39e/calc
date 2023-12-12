@@ -1,12 +1,24 @@
-#include <string>
+#include <string.h>
 #include <stdio.h>
 #include "deftypes.h"
 using namespace std;
 /// @brief string built with C to help some features.
+/*
+TODO: 
+- atoi ?
+- a to cxx_string
+*/
 class _str
 {
 public:
     // get length of this object
+    void edit_full(char str[])
+    {
+        for (int i = 0; i < strlen(str); i++)
+        {
+            arr[i] = str[i];
+        }
+    }
     int length()
     {
         return strlen(arr);
@@ -35,30 +47,7 @@ public:
             arr[length()] = num % 10;
             num /= 10;
         }
+        reverse();
     }
-    char arr[INT32_MAX];
-
-private:
+    char arr[2<<20];
 };
-char *itoa(_int64 num)
-{
-    char *str = new char[100];
-    int it = 0;
-    while (num)
-    {
-        str[it++] = num % 10;
-        num /= 10;
-    }
-    return str;
-}
-// char *itoa(_int32 num)
-// {
-//     char *str = new char[100];
-//     int it = 0;
-//     while (num)
-//     {
-//         str[it++] = num % 10;
-//         num /= 10;
-//     }
-//     return reverse(str, it);
-// }
