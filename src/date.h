@@ -3,6 +3,10 @@
 #include "stringaddons.h"
 /// @brief A class for date.
 /// @return structure: year/month/day hour:minute:second
+/*
+TODO: 
+- Finish print function for date. 
+*/
 class date
 {
 public:
@@ -28,10 +32,6 @@ public:
         hour = lt->tm_hour;
         minute = lt->tm_min;
         second = lt->tm_sec;
-    }
-    void print()
-    {
-        
     }
 
 private:
