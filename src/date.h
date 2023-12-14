@@ -4,8 +4,6 @@
 /// @brief A class for date.
 /// @return structure: year/month/day hour:minute:second
 /*
-TODO: 
-- Finish print function for date. 
 */
 class date
 {
