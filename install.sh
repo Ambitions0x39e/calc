@@ -1,11 +1,15 @@
 #!/bin/zsh
+# Get system name
+_SYSTEMNAME = uname -s
+echo "System name: `uname`" >&2
 echo "Checking Environment Dependencies" >&2
-sleep 5
-if ! command -v clang >/dev/null 2>&1; then
-  echo "Xcode command line tools not installed. Installing..." >&2
-  xcode-select --install
-  exit 1
-fi
+  if test `uname` = "Darwin"; then
+    sleep 5
+    if ! command -v clang >/dev/null 2>&1; then
+      echo "Xcode command line tools not installed. Installing..." >&2
+      xcode-select --install
+      exit 1
+    fi  
 echo "Xcode command line tool is successfully installed." >&2
 echo "Compiling C++ files..." >&2
 sleep 5
