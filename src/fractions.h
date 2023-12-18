@@ -40,8 +40,9 @@ public:
     {
         printf("%d/%d", numerator, denominator);
     }
-    void __print_real() {
-        printf("%.3lf", (double)((double)numerator/denominator));
+    void __print_real()
+    {
+        printf("%.3lf", (double)((double)numerator / denominator));
     }
     // re-define operator for `class fractions` : addition
     fractions operator+(const fractions &b) const
