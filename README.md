@@ -20,6 +20,8 @@ Note: For Versions after 0.2.0 beta, the installation of these dependencies are 
 ## Future target
 - Finish gui construction, might based on Tkinker or PythonSimpleGUI
 ---
-By <cite>Ambitions0x39e.</cite>
-Current Version: <code>0.2.0 Beta</code>
+By <cite>Ambitions0x39e.</cite> 
+
+Current Version: <code>1.0.0</code>
+
 Last update: <code>2023/12/18</code>
