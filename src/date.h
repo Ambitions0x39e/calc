@@ -52,6 +52,35 @@ public:
         } else {
             printf("%d", second);
         }
+    }
+    void println() {
+        // Year/Month/Day Hour:Minute:Second
+        printf("%d/", year);
+        if(month<10) {
+            printf("0%d/", month);
+        } else {
+            printf("%d/", month);
+        }
+        if(day<10) {
+            printf("0%d ", day);
+        } else {
+            printf("%d ", day);
+        }
+        if(hour<10) {
+            printf("0%d:", hour);
+        } else {
+            printf("%d:", hour);
+        }
+        if(minute<10) {
+            printf("0%d:", minute);
+        } else {
+            printf("%d:", minute);
+        }
+        if(second<10) { 
+            printf("0%d", second);
+        } else {
+            printf("%d", second);
+        }
         printf("\n");
     }
 private:
