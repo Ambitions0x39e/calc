@@ -13,7 +13,7 @@ int main() {
     sort(arr,arr+n);
     for(int i=0; i<n; i++) {
         cerr<<arr[i]<<" ";
-    }
+    }   
     cerr<<endl;
     return 0;
 }
