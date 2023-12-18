@@ -32,8 +32,8 @@ mkdir exes
 echo "Compile: Probability Distribution" >&2
 sleep 2
 cd Probability\ Distribution
-  g++ probability_calculator_fraction.cpp -o ../exes/probability_calculator_fraction -O2 -lm
-  g++ probability_calculator_float.cpp -o ../exes/probability_calculator_float -O2 -lm
+  g++ probability_calculator_fraction.cpp -o ../exes/probability_calculator_fraction -O2 -lm -w
+  g++ probability_calculator_float.cpp -o ../exes/probability_calculator_float -O2 -lm -w
   cd ../exes
    chmod +x ./probability_calculator_float ./probability_calculator_fraction
   cd ../
@@ -41,8 +41,20 @@ cd Probability\ Distribution
 echo "Compile: Variance & Standard Deviation" >&2
 sleep 2
 cd Variance\ and\ SD
-  g++ variance.cpp -o ../exes/variance -O2 -lm
+  g++ variance.cpp -o ../exes/variance -O2 -lm -w
   cd ../exes
     chmod +x ./variance
   cd ../
+# Compile special features
+echo "Compile: features" >&2
+sleep 2
+cd features
+  g++ sort-files.cpp -o ../exes/sort-files -O2 -lm -w
+  cd ../exes
+    chmod +x ./sort-files
+  cd ../
+# Compile Main
+echo "Compile: Main C++ File" >&2
+sleep 1
+g++ main.cpp -o main -O2 -lm
 echo "C++ files successfully compiled!" >&2
