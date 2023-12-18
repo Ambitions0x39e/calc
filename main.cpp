@@ -31,7 +31,7 @@ int main() {
         }
         if(prompt=="exit()" || prompt=="quit()" || prompt=="exit" || prompt=="quit" || prompt=="^D") {
             break;
-        } else if(prompt=="Probability Distribution Fraction") {// Probability Distribution.
+        } else if(prompt=="Probability Distribution Fraction") {
             system("./exes/probability_calculator_fraction");
             cout<<endl;
         } else if(prompt=="Probability Distribution Float") {
@@ -39,7 +39,8 @@ int main() {
             cout<<endl;
         } else if(prompt=="sort") {
             system("./exes/sort-files");
+        } else if(prompt=="variance") {
+            system("./exes/variance");
         }
-
     }    
 }
