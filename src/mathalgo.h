@@ -1,4 +1,5 @@
 #include "stdio.h"
+#include "deftypes.h"
 #define _int64 long long
 _int64 QuickPow(_int64 x, _int64 n)
 {
@@ -16,14 +17,10 @@ _int64 QuickPow(_int64 x, _int64 n)
         return res * res;
     }
 }
-/*
-TODO:
-- Permutation support
-    - Check if Permutation can run
-- Combination support
-    - _int64per
-*/
-// This function is for calculating permutation nPm under the usage of _int64 number.
+///@brief This function is for calculating permutation nPm under the usage of _int64 number.
+///@param n The total number.
+///@param m The number of selection.
+///@return The permutation result, in _int64 structure.
 _int64 Permutation(_int64 n, _int64 m)
 {
     _int64 result = 1;
@@ -36,6 +33,22 @@ _int64 Permutation(_int64 n, _int64 m)
         result /= i;
     }
     return result;
+}
+///@brief This function is for calculating combination nCm under the usage of _int64 number.
+///@param n The total number.
+///@param m The number of selection.
+///@return The combination result, in _int64 structure.
+_int64 Combination(_int64 n, _int64 m) 
+{
+    _int64 result = Permutation(n,m);
+    for (int i = 2; i <= m; i++)
+    {
+        result /= i;
+    }
+    return result;
+}
+_int64 Factorial(_int64 n) {
+    _int64 result = 1;
 }
 /*
 

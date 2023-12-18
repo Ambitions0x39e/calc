@@ -1,3 +1,7 @@
-run.py
+# System cache
 .DS_Store
+.vscode
+# Testing files
 gptWstarter.py
+test.cpp
+test
