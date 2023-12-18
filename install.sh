@@ -56,5 +56,5 @@ cd features
 # Compile Main
 echo "Compile: Main C++ File" >&2
 sleep 1
-g++ main.cpp -o main -O2 -lm
+g++ main.cpp -o main -O2 -lm -w
 echo "C++ files successfully compiled!" >&2
