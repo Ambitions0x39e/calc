@@ -1,5 +1,9 @@
+# System cache
 .DS_Store
+.vscode
+# Testing files
 gptWstarter.py
 test.cpp
 test
-.vscode
+# Compiled file directory
+exes
