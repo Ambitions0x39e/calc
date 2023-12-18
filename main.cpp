@@ -41,6 +41,8 @@ int main() {
             system("./exes/sort-files");
         } else if(prompt=="variance") {
             system("./exes/variance");
+        } else {
+            cerr<<"Invalid Input"<<endl;
         }
     }    
 }
