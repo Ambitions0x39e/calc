@@ -1,4 +1,5 @@
-
+Versions 1.0.0:
+  - Interactive Command Line
 Versions 0.2.0 Beta: 
   - Installation update: add system-id detect and give different actions to different systems.
 Versions 0.1.0:
