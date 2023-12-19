@@ -24,7 +24,7 @@ echo "Checking Environment Dependencies" >&2
 sleep 3
 echo "Compiling C++ files..." >&2
 sleep 5
-if test -d /exes; then 
+if test -d exes; then 
   rm -rf exes
 fi
 mkdir exes
