@@ -58,3 +58,11 @@ echo "Compile: Main C++ File" >&2
 sleep 1
 g++ main.cpp -o main -O2 -lm -w
 echo "C++ files successfully compiled!" >&2
+echo "Now, putting the executable file in to path" >&2
+echo "In this process it might require computer password, ">&2
+echo "Please input your password, the terminal won't show the password you typed in." >&2
+sleep 1
+cp main acalc
+sudo cp acalc /usr/local/bin
+echo "Successfully installed!" >&2
+echo "You can use acalc in your terminal to execute. " >&2
