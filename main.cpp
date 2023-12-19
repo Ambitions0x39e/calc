@@ -12,7 +12,7 @@ int main() {
     date now;
     now.__init();
     system("sleep 1");
-    cerr<<"Simple Calculator for Equations"<< "-version:"<<" 0.2.0 Beta"<<endl;  
+    cerr<<"Simple Calculator for Equations"<< "-version:"<<" 1.0.0"<<endl;  
     now.print();
     cerr<<", System: "<<sysName<<endl;
     cerr<<"Type exit() or quit() to exit the program."<<endl;
@@ -25,11 +25,12 @@ int main() {
             cerr<<"END";
             return 0;   
         }
-        // Detect if the input is ^l or clear
-        if(prompt=="clear" || prompt=="^L") {
+        // Detect if the input is ^L or clear
+        size_t ctrlPos = prompt.find("Ctrl");
+        size_t lPos = prompt.find("L");
+         if(prompt=="\f" || prompt=="clear") {
             system("clear");
-        }
-        if(prompt=="exit()" || prompt=="quit()" || prompt=="exit" || prompt=="quit" || prompt=="^D") {
+        } else if(prompt=="exit()" || prompt=="quit()" || prompt=="exit" || prompt=="quit" || prompt=="^D") {
             break;
         } else if(prompt=="Probability Distribution Fraction") {
             system("./exes/probability_calculator_fraction");
