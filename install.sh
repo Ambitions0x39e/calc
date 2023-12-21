@@ -50,8 +50,12 @@ echo "Compile: features" >&2
 sleep 2
 cd features
   g++ sort-files.cpp -o ../exes/sort-files -O2 -lm -w
+  g++ combination.cpp -o ../exes/combination -O2 -lm -w
+  g++ permutation.cpp -o ../exes/permutation -O2 -lm -w
   cd ../exes
     chmod +x ./sort-files
+    chmod +x ./combination
+    chmod +x ./permutation
   cd ../
 # Compile Main
 echo "Compile: Main C++ File" >&2
