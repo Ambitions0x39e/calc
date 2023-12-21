@@ -5,3 +5,6 @@
 gptWstarter.py
 test.cpp
 test
+# Ignoring
+target-feature.txt
+exes

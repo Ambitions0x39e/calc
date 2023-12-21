@@ -24,7 +24,7 @@ echo "Checking Environment Dependencies" >&2
 sleep 3
 echo "Compiling C++ files..." >&2
 sleep 5
-if test -d /exes; then 
+if test -d exes; then 
   rm -rf exes
 fi
 mkdir exes
@@ -50,11 +50,23 @@ echo "Compile: features" >&2
 sleep 2
 cd features
   g++ sort-files.cpp -o ../exes/sort-files -O2 -lm -w
+  g++ combination.cpp -o ../exes/combination -O2 -lm -w
+  g++ permutation.cpp -o ../exes/permutation -O2 -lm -w
   cd ../exes
     chmod +x ./sort-files
+    chmod +x ./combination
+    chmod +x ./permutation
   cd ../
 # Compile Main
 echo "Compile: Main C++ File" >&2
 sleep 1
 g++ main.cpp -o main -O2 -lm -w
 echo "C++ files successfully compiled!" >&2
+echo "Now, putting the executable file in to path" >&2
+echo "In this process it might require computer password, ">&2
+echo "Please input your password, the terminal won't show the password you typed in." >&2
+sleep 1
+cp main acalc
+sudo cp acalc /usr/local/bin
+echo "Successfully installed!" >&2
+echo "You can use acalc in your terminal to execute. " >&2
