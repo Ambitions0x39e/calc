@@ -4,6 +4,8 @@
 #include <cstdlib>
 #include <sys/utsname.h>
 #include "src/date.h"
+#include "src/versions.h"
+#include "src/mathalgo.h"
 using namespace std;
 int main() {
     utsname tmp;
@@ -12,9 +14,9 @@ int main() {
     date now;
     now.__init();
     system("sleep 1");
-    cerr<<"Simple Calculator for Equations"<< "-version:"<<" 1.0.0"<<endl;  
+    cerr<<"Simple Calculator for Equations"<< "-version:"<<__VERSIONS__OF__PROG<<endl;  
     now.print();
-    cerr<<", System: "<<sysName<<endl;
+    cerr<<", on system: "<<sysName<<endl;
     cerr<<"Type exit() or quit() to exit the program."<<endl;
     string prompt;
     while(1) {
@@ -32,16 +34,20 @@ int main() {
             system("clear");
         } else if(prompt=="exit()" || prompt=="quit()" || prompt=="exit" || prompt=="quit" || prompt=="^D") {
             break;
-        } else if(prompt=="Probability Distribution Fraction") {
+        } else if(prompt=="PD: Fraction") {
             system("./exes/probability_calculator_fraction");
             cout<<endl;
-        } else if(prompt=="Probability Distribution Float") {
+        } else if(prompt=="PD: Float") {
             system("./exes/probability_calculator_float");
             cout<<endl;
         } else if(prompt=="sort") {
             system("./exes/sort-files");
         } else if(prompt=="variance") {
             system("./exes/variance");
+        } else if(prompt=="combination") {
+            system("./exes/combination");
+        } else if(prompt=="permutation") {
+            system("./exes/permutation");
         } else {
             cerr<<"Invalid Input"<<endl;
         }
