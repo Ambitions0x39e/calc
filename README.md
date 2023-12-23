@@ -5,8 +5,8 @@ A calculator.
 <h2>Needed Environment</h2>
 
 Note: For Versions after 0.2.0 beta, the installation of these dependencies are already embedded in compiling. 
-- For Linux users: We need <code>g++</code>
-- For macOS users: We need <code>Xcode Command Line Tools</code>
+- For Linux users: The program needs <code>g++</code>
+- For macOS users: The program need <code>Xcode Command Line Tools</code>
 
 ---
 ## Data Type Structure
@@ -21,5 +21,5 @@ Note: For Versions after 0.2.0 beta, the installation of these dependencies are 
 - Finish gui construction, might based on Tkinker or PythonSimpleGUI
 ---
 By <cite>Ambitions0x39e.</cite>
-Current Version: <code>0.2.0 Beta</code>
-Last update: <code>2023/12/18</code>
+Current Version: <code>1.0.0</code>
+Last update: <code>2023/12/23</code>
