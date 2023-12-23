@@ -6,7 +6,7 @@ A calculator.
 
 Note: For Versions after 0.2.0 beta, the installation of these dependencies are already embedded in compiling. 
 - For Linux users: The program needs <code>g++</code>
-- For macOS users: The program need <code>Xcode Command Line Tools</code>
+- For macOS users: The program needs <code>Xcode Command Line Tools</code>
 
 ---
 ## Data Type Structure
