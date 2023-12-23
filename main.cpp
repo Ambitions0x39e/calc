@@ -29,8 +29,6 @@ int main() {
             return 0;   
         }
         // Detect if the input is ^L or clear
-        size_t ctrlPos = prompt.find("Ctrl");
-        size_t lPos = prompt.find("L");
          if(prompt=="\f" || prompt=="clear") {
             system("clear");
         } else if(prompt=="exit()" || prompt=="quit()" || prompt=="exit" || prompt=="quit" || prompt=="^D") {
@@ -50,7 +48,7 @@ int main() {
         } else if(prompt=="permutation") {
             system("./exes/permutation");
         } else {
-        //     cerr<<"Invalid Input"<<endl;
-        // }
+            cerr<<"Invalid Input"<<endl;
+        }
     }    
 }
