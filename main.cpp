@@ -6,6 +6,7 @@
 #include "src/date.h"
 #include "src/versions.h"
 #include "src/mathalgo.h"
+#include "src/equation.h"
 using namespace std;
 int main() {
     utsname tmp;
@@ -49,7 +50,7 @@ int main() {
         } else if(prompt=="permutation") {
             system("./exes/permutation");
         } else {
-            cerr<<"Invalid Input"<<endl;
-        }
+        //     cerr<<"Invalid Input"<<endl;
+        // }
     }    
 }
