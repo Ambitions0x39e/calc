@@ -7,27 +7,18 @@ rxs=sqrt(x^2)
 n=n
 rxms=sqrt(x-mean)^2
 */
-int main()
-{
+int main() {
     double rx, rxs, n, rxms = -1;
     string command;
-    do
-    {
+    do {
         cin >> command;
-        if (command == "rx")
-        {
+        if (command == "rx") {
             cin >> rx;
-        }
-        else if (command == "rxs")
-        {
+        } else if (command == "rxs") {
             cin >> rxs;
-        }
-        else if (command == "n")
-        {
+        } else if (command == "n") {
             cin >> n;
-        }
-        else if (command == "rxms")
-        {
+        } else if (command == "rxms") {
             cin >> rxms;
         }
     } while (command != "END");
